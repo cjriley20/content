@@ -2,6 +2,7 @@ from __future__ import print_function
 
 from IPython.core.display import HTML
 from matplotlib import rcParams
+from cycler import cycler
 
 #colorbrewer2 Dark2 qualitative color table
 dark2_colors = [(0.10588235294117647, 0.6196078431372549, 0.4666666666666667),
@@ -19,7 +20,7 @@ def customize_mpl():
 
     rcParams['figure.figsize'] = (10, 6)
     rcParams['figure.dpi'] = 150
-    rcParams['axes.prop_cycle'] = dark2_colors
+    rcParams['axes.prop_cycle'] = cycler(color=dark2_colors)
     rcParams['lines.linewidth'] = 2
     rcParams['axes.grid'] = True
     rcParams['axes.facecolor'] = '#eeeeee'
